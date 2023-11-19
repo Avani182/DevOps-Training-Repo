@@ -13,12 +13,17 @@ variable "env_name" {
 }
 
 # Terraform provider specific variables.
-variable "aws_profile_name" {
-  description = "AWS profile name"
-  type        = string
-}
+
 variable "aws_region_name" {
   description = "AWS region name"
+  type        = string
+}
+variable "aws_access_key" {
+  description = "AWS Access key"
+  type        = string
+}
+variable "aws_secret_key" {
+  description = "AWS secret key"
   type        = string
 }
 
@@ -27,4 +32,6 @@ variable "sns_topic_name" {
   description = "SNS topic name"
   type        = string
 }
+
+
 
