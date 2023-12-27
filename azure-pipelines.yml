@@ -21,4 +21,3 @@ steps:
     pwd
     whoami
   displayName: 'Run a multi-line script'
-  
