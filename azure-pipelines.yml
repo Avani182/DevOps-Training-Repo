@@ -11,13 +11,15 @@ pool:
   # demands: SpecialSoftware # exists check for SpecialSoftware
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
+- task: TerraformInstaller@0
+  displayName: "Install Terraform"
+  inputs:
+    terraformVersion: '1.3.9'
+    terraformDownloadLocation: 'https://releases.hashicorp.com/terraform'
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    ls -la
-    pwd
-    whoami
-  displayName: 'Run a multi-line script'
+    terraform init
+    terraform fmt
+    terraform validate
+    terraform plan
+  displayName: 'Run a one-line script'
