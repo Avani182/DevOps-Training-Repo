@@ -17,5 +17,11 @@ steps:
     sudo apt update
     sudo apt install terraform -y
     terraform version
-  displayName: 'Instsll Terraform'
+    echo terrform installed
+    sudo apt install awscli -y
+    aws --version
+    echo aws cli installede
+    aws configure
+  displayName: 'Instsll Terraform and aws cli'
+  
   
