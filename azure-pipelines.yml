@@ -20,8 +20,11 @@ steps:
     echo terrform installed
     sudo apt install awscli -y
     aws --version
+    aws s3 ls
     echo aws cli installede
-    aws configure
+    echo AK Value: $AWS_ACCESS_KEY_ID
+    echo SK Value: $AWS_SECRET_KEY
+    echo Reg Value: $AWS_DEFAULT_REGION
   displayName: 'Instsll Terraform and aws cli'
   
   
