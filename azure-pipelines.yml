@@ -17,3 +17,4 @@ steps:
     terraform fmt
     terraform validate
   displayName: 'Instsll Terraform'
+  
