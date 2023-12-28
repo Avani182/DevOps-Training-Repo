@@ -16,4 +16,4 @@ steps:
     terraform init
     terraform fmt
     terraform validate
-  displayName: 'Instsll Docker'
+  displayName: 'Instsll Terraform'
