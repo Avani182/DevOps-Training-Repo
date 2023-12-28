@@ -11,15 +11,15 @@ pool:
   # demands: SpecialSoftware # exists check for SpecialSoftware
 
 steps:
-
-- task: TerraformInstaller@0
-  displayName: "Install Terraform"
+- task: TerraformTaskV4@0
+  displayName: 'Install Terraform'
   inputs:
-    terraformVersion: '1.3.9'
-    terraformDownloadLocation: 'https://releases.hashicorp.com/terraform'
-- script: |
-    terraform init
-    terraform fmt
-    terraform validate
-    terraform plan
-  displayName: 'Run a one-line script'
+    terraformVersion: 'latest'
+
+- checkout: self
+  displayName: 'Checkout repository'
+
+- task: TerraformTaskV4@1
+  displayName: 'Terraform Init'
+  inputs:
+    command: 'init'
