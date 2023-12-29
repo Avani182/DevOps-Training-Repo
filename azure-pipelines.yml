@@ -30,6 +30,8 @@ steps:
     aws configure set region ${env:AWS_DEFAULT_REGION}
     terraform init
     terraform fmt
+    terraform validate
+    terraform plan
   displayName: 'Instsll Terraform and aws cli'
   
   
